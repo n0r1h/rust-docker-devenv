@@ -179,4 +179,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 autocmd VimEnter * NERDTree
 syntax enable
-colorscheme molokai
+colorscheme sunbather 
