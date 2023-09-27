@@ -1,3 +1,5 @@
+//! Generate Assembly from AST.
+
 use std::{
     error::Error,
     fmt::{self, Display},
