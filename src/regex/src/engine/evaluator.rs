@@ -128,7 +128,7 @@ fn eval_width(inst: &[Instruction], line: &[char]) -> Result<bool, EvalError> {
         }
 
         if !ctx.is_empty() {
-            ctx.push_back((*addr2, sp));
+            ctx.push_back((pc, sp));
             pop_ctx(&mut pc, &mut sp, &mut ctx)?;
         }
     }
