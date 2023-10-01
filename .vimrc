@@ -1,14 +1,15 @@
 call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
+  Plug 'vim-airline/vim-airline'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf.vim',
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
 call plug#end()
 
 syntax enable filetype plugin indent on
 
-let g:coc_global_extensions = ['coc-rust-analyzer']
 let g:rustfmt_autosave = 1
 
 set number
@@ -177,6 +178,14 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" highlight CocFloating ctermbg=white
+" highlight CocFloatSbar ctermbg=8
+set t_Co=256  
 autocmd VimEnter * NERDTree
 syntax enable
-colorscheme  molokai
+colorscheme sunbather
+set background=dark
+
+let g:airline_powerline_fonts = 1 
+hi CocInlayHint guibg=gray guifg=#B7D644 ctermbg=235 ctermfg=148
+hi CocHintFloat ctermfg=148 guifg=#ff0000 ctermbg=235
