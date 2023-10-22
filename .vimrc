@@ -178,6 +178,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+nnoremap <C-p> :Files<CR>
+
 " highlight CocFloating ctermbg=white
 " highlight CocFloatSbar ctermbg=8
 set t_Co=256  
